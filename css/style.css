@@ -1,0 +1,232 @@
+/*Общие стили*/
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, #2F3689 0%, rgba(74, 70, 255, 0.35) 100%);
+    color: #FFFFFF;
+}
+
+.container {
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 1170px;
+}
+
+.page-header {
+    margin-top: 25px;
+    color: #000000;
+}
+
+.page-header .header__block {
+  display: grid; 
+  grid-template-columns: 15% 15% auto auto auto; 
+  grid-template-rows: 1fr; 
+  gap: 0px 1px; 
+  grid-template-areas: "logo logo menu-nav menu-nav menu-nav";
+  justify-content: space-between; 
+}
+
+.header__logo {
+	padding-top: 15px;
+	grid-area: logo;
+}
+
+.header__menu {
+	grid-area: menu-nav;
+}
+
+.menu-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0px;
+}
+
+.menu-nav li {
+    display: inline-block;
+    vertical-align: top;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+.menu-nav a {
+	font-weight: 800;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    padding: 25px 40px;
+}
+
+.menu-nav a:hover {
+	text-decoration: underline;
+}
+
+.menu-nav a.login {
+/*	color: #0029FF;*/
+}
+
+.menu-nav a.login:hover {
+	color: #000000;
+	background-color: #F3F3F3;
+}
+
+main {
+	padding-top: 120px;
+}
+
+.main__subtitle h2 {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.main__title {
+	margin-top: 5px;
+}
+
+.main__title h1 {
+	margin: 0;
+	font-weight: bold;
+	font-size: 72px;
+	line-height: 80px;
+}
+
+.main__text {
+	margin-top: 40px;
+}
+
+.main__text p {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+
+.main__btn {
+	margin-top: 70px;
+}
+
+
+.button {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	background-color: #FFFFFF;
+	border: 3px solid #FFFFFF; 
+	border-radius: 10px;
+	padding: 15px 30px;
+	color: #393F95;
+}
+
+.button:hover {
+	background-color: transparent;
+	color: #FFFFFF;
+}
+
+.button:active {
+	border: 3px solid #393F95; 
+	background-color: #393F95;
+	color: #FFFFFF;
+}
+
+
+.main-features {
+	display: grid; 
+	grid-auto-columns: 1fr; 
+	grid-template-columns: 1fr 1fr 1fr; 
+	grid-template-rows: 1fr; 
+	gap: 0px 100px; 
+	grid-template-areas: ". . ."; 
+	justify-content: space-evenly; 
+	justify-items: stretch;
+	margin-top: 120px;
+}
+
+
+.main-features__item {
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 30px; 
+  grid-template-areas: 
+    ". ."; 
+  justify-content: center; 
+  align-content: center; 
+  justify-items: center; 
+  align-items: center; 
+}
+
+.feature__name {
+	margin-top: 50px;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+}
+
+.feature__text {
+	font-size: 11px;
+	line-height: 13px;
+	text-align: center;
+}
+
+@media screen and (min-width: 1024px) and (min-height: 630px)
+{
+    body
+    {
+        height: 100vh!important;
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    body
+    {
+        height: 100%;
+    }
+
+    .container
+    {
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+
+    .container
+    {
+        max-width: 576px;
+    }
+}
+
+@media screen and (max-width: 576px)
+{
+
+    .container
+    {
+        max-width: 480px;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+
+    .container
+    {
+        max-width: 310px;
+    }
+}
